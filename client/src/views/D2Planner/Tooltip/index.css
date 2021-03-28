@@ -1,0 +1,17 @@
+#tooltip h2 {
+  font-family: 'Diablo Heavy';
+  font-variant: small-caps;
+  font-weight: bold;
+  color: lime;
+  font-size: 22px;
+}
+
+#tooltip p {
+  font-family: 'Diablo Heavy';
+  color: white;
+  font-size: 13px;
+}
+
+#tooltip h2::first-letter {
+  font-variant: normal;
+}

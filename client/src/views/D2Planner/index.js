@@ -29,7 +29,7 @@ class D2Planner extends Component {
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
   }
 
-  handleMouseEnter = (e, id) => {
+  handleMouseEnter = (e, id, className) => {
     const el = document.getElementById(id);
     const map = document.getElementsByClassName("skilltree");
     const mapNumber = id.slice(1,2);
@@ -44,12 +44,12 @@ class D2Planner extends Component {
       return {
         toolTipStyle,
         toolTipIsActive: true,
-        activeTooltipData: getSkillInfo(CLASS_SKILL_DATA["amazon"], id)
+        activeTooltipData: getSkillInfo(CLASS_SKILL_DATA[className], id)
       };
     });
   }
 
-  handleMouseLeave = (e) => {
+  handleMouseLeave = () => {
     this.setState({toolTipIsActive: false, activeTooltipData: []});
   }
 
@@ -128,6 +128,7 @@ class D2Planner extends Component {
                     <SkillList
                       skillTreeId={i+1}
                       skillTree={tree}
+                      className={CHAR_CLASS}
                       handleMouseEnter={this.handleMouseEnter}
                       handleMouseLeave={this.handleMouseLeave}
                     />

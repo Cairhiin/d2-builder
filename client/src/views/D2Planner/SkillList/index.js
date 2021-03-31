@@ -5,6 +5,7 @@ import { calcCoordinates } from '../Utilities';
 const SkillList = ({
   skillTreeId,
   skillTree,
+  className,
   handleMouseEnter,
   handleMouseLeave
 }) => {
@@ -19,8 +20,8 @@ const SkillList = ({
             key={id}
             coords={ calcCoordinates(r, c) }
             id={id}
-            handleMouseEnter={(e) => handleMouseEnter(e, id)}
-            handleMouseLeave={(e) => handleMouseLeave(e, id)}
+            handleMouseEnter={(e) => handleMouseEnter(e, id, className)}
+            handleMouseLeave={() => handleMouseLeave()}
           />
         );
       }

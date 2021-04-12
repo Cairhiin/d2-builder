@@ -44,7 +44,8 @@ class D2Planner extends Component {
       return {
         toolTipStyle,
         toolTipIsActive: true,
-        activeTooltipData: getSkillInfo(CLASS_SKILL_DATA[className], id)
+        activeTooltipData: getSkillInfo(CLASS_SKILL_DATA[className], id),
+        activeTooltipId: id
       };
     });
   }
@@ -148,6 +149,7 @@ class D2Planner extends Component {
           <Tooltip
             skill={this.state.activeTooltipData}
             style={this.state.toolTipStyle}
+            level={this.state[this.state.activeTooltipId]}
           />
         }
       </div>

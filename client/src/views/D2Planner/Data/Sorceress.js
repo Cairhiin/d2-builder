@@ -1,9 +1,7 @@
+import IceBolt from './Sorceress/IceBolt';
+
 const SORCERESS_SKILLS = [
-  {
-    id: "t1r1c2",
-    name: "Ice Bolt",
-    description: "Shoots a bolt of ice that damages and slows your victim"
-  },
+  IceBolt,
   {
     id: "t1r1c3",
     name: "Frozen Armor",

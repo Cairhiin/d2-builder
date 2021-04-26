@@ -39,7 +39,7 @@ const Tooltip = ({ skill, style, level, dependency }) => {
           dependency={dependency}
         />
       </div>
-      { dependencies && (
+      { dependencies.length > 0 && (
           <>
             <h2>{ name } Receives Bonuses From:</h2>
             <p>{ DEPENDENCIES_JSX }</p>

@@ -4,12 +4,13 @@ const Nova = {
   description: "Creates an expanding ring of electricity",
   data: {
     "Damage": function(slvl) {
-      if (slvl === 0) return 0;
-      if (slvl < 9) return `${6 * slvl - 5}-${Math.floor(8*slvl + 12)}`;
-      if (slvl < 17) return `${7 * slvl - 13}-${Math.floor(9*slvl + 4)}`;
-      if (slvl < 23) return `${8 * slvl - 29}-${Math.floor(10*slvl - 12)}`;
-      if (slvl < 29) return `${9 * slvl - 51}-${11*slvl - 34}`;
-      return `${10 * slvl - 79}-${12*slvl - 62}`;
+      let min = 6*slvl - 5;
+      let max = 8*slvl + 12
+      if (slvl > 28) { min = 10*slvl - 79; max = 12*slvl - 62; }
+      if (slvl > 22) { min = 9*slvl - 51; max = 11*slvl - 34; }
+      if (slvl > 16) { min = 8*slvl - 29; max = 10*slvl - 12; }
+      if (slvl > 8) { min = 7*slvl - 13; max = 9*slvl + 4; }
+      return { min: min, max: max };
     },
     "Mana Cost": () => 15
   },

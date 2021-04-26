@@ -13,15 +13,19 @@
   font-variant: small-caps;
   font-weight: bold;
   color: lime;
-  font-size: 22px;
+  font-size: 21px;
 }
 
 #tooltip p, #tooltip div {
   font-family: 'Diablo Heavy';
   color: white;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 #tooltip h2::first-letter {
   font-variant: normal;
+}
+
+#tooltip .skill-block {
+  margin: 0.5em 0;
 }

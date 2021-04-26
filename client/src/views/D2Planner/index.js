@@ -21,6 +21,7 @@ class D2Planner extends Component {
       ...D2PLANNER_LAYOUT,
       skillpoints: TOTAL_SKILLPOINTS,
       activeTooltipData: [],
+      activeTooltipDepencies: [],
       toolTipIsActive: false,
       toolTipStyle: null
      };
@@ -38,14 +39,28 @@ class D2Planner extends Component {
     const coords = el.coords.split(", ");
 
     this.setState(prevState => {
+      const skillinfo = getSkillInfo(CLASS_SKILL_DATA[className], id);
+      const dependencies = skillinfo[0].dependencies;
+      let multiplier = 1;
+      let dep = [];
+      for (let i=0; i<dependencies.length; i++) {
+        if (dependencies[i].id in this.state
+          && dependencies[i].description.includes("Damage")) {
+            dep.push(this.state[dependencies[i].id]);
+            multiplier += this.state[dependencies[i].id] * (dependencies[i].value / 100).toFixed(2)
+        }
+      }
+
       let toolTipStyle = Object.assign({}, prevState.toolTipStyle);
       toolTipStyle.left = `${parseInt(coords[2]) + posX - 50}px`;
       toolTipStyle.top = `${parseInt(coords[3]) + posY + 50}px`;
       return {
         toolTipStyle,
         toolTipIsActive: true,
-        activeTooltipData: getSkillInfo(CLASS_SKILL_DATA[className], id),
-        activeTooltipId: id
+        activeTooltipData: skillinfo,
+        activeTooltipMulti: multiplier,
+        activeTooltipDepencies: dep,
+        activeTooltipId: id,
       };
     });
   }
@@ -70,13 +85,20 @@ class D2Planner extends Component {
         e.preventDefault();
         // get the skill's downtree points and check if they are not > 0
         let hasDownTreePoints = checkDownTreePoints(this.state, skillTree, key);
-        if (hasDownTreePoints === false && value > 0) {
+        if ((hasDownTreePoints === false && value > 0)
+          || (hasDownTreePoints === true && value > 1)) {
 
           if (e.shiftKey) {
-            skillValueChange = value - 10 < 1 ? value : 10;
+            if (value - 10 < 1 && !hasDownTreePoints) {
+               skillValueChange = value;
+            }
+            else if (value - 10 < 1 && hasDownTreePoints) {
+               skillValueChange = value - 1;
+            }
+            else skillValueChange = 10;
           }
           if (e.ctrlKey) {
-            skillValueChange = value;
+            skillValueChange = hasDownTreePoints === false ? value : value - 1;
           }
           this.setState({
             [key]: value - skillValueChange,
@@ -149,8 +171,11 @@ class D2Planner extends Component {
           <Tooltip
             skill={this.state.activeTooltipData}
             style={this.state.toolTipStyle}
+            multi={this.state.activeTooltipMulti}
+            dependency={this.state.activeTooltipDepencies}
             level={this.state[this.state.activeTooltipId]}
           />
+
         }
       </div>
     );

@@ -6,10 +6,10 @@ const FireWall = {
     "Damage": function(slvl, dlvl=[0, 0]) {
       let dmgMultiplier = dlvl[0] * FireWall.dependencies[0].value + dlvl[1] * FireWall.dependencies[1].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
-      let min = 336*slvl - 2336;
-      let max = 336*slvl - 2256;
-      if (slvl < 17) { min = 224*slvl - 544; max = 224*slvl - 464; }
-      if (slvl < 9) { min = 144*slvl + 96; max = 144*slvl + 176; }
+      let min = 144*slvl + 96;
+      let max = 144*slvl + 176;
+      if (slvl > 16) { min = 336*slvl - 2336; max = 336*slvl - 2256; }
+      if (slvl > 8) { min = 224*slvl - 544; max = 224*slvl - 464; }
       return { min: dmgMultiplier*min, max: dmgMultiplier*max };
     },
     "Mana Cost": slvl => 21 + slvl,

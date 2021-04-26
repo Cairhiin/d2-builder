@@ -39,21 +39,25 @@ const ChillingArmor = {
   },
   dependencies: [
       {
+        id: "t3r1c3",
         name: "Frozen Armor",
         description: "+{V} seconds per level",
         value: 10
       },
       {
+        id: "t3r1c3",
         name: "Frozen Armor",
         description: "+{V}% Cold damage per level",
         value: 7
       },
       {
+        id: "t3r3c3",
         name: "Shiver Armor",
         description: "+{V} seconds per level",
         value: 10
       },
       {
+        id: "t3r3c3",
         name: "Shiver Armor",
         description: "+{V}% Cold damage per level",
         value: 7

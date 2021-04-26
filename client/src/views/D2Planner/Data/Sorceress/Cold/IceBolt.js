@@ -3,18 +3,22 @@ const IceBolt = {
   name: "Ice Bolt",
   description: "Shoots a bolt of ice that damages and slows your victim",
   data: {
-    "Damage": function(slvl) {
-      if (slvl === 0) return 0;
-      if (slvl < 9) return `${slvl + 2}-${Math.floor(1.5*slvl + 3.5)}`;
-      if (slvl < 17) return `${2 * slvl - 6}-${Math.floor(2.5*slvl - 4.5)}`;
-      if (slvl < 23) return `${3 * slvl - 22}-${Math.floor(3.5*slvl - 20.5)}`;
-      if (slvl < 29) return `${4 * slvl - 44}-${4*slvl - 44}`;
-      return `${5 * slvl - 72}-${5*slvl - 72}`;
+    "Damage": function(slvl, dlvl=[0, 0, 0, 0, 0]) {
+      let dmgMultiplier = dlvl[0] * IceBolt.dependencies[0].value +
+        dlvl[1] * IceBolt.dependencies[1].value +
+        dlvl[2] * IceBolt.dependencies[2].value +
+        dlvl[3] * IceBolt.dependencies[3].value +
+        dlvl[4] * IceBolt.dependencies[4].value;
+      dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
+      let min = slvl + 2;
+      let max = Math.floor(1.5*slvl + 3.5);
+      if (slvl > 28)  { min = 5*slvl - 72; max = 5*slvl - 72; }
+      if (slvl > 22)  { min = 4*slvl - 44; max = 4*slvl - 44; }
+      if (slvl > 16)  { min = 3*slvl - 22; max = Math.floor(3.5*slvl - 20.5); }
+      if (slvl > 8) { min = 2*slvl - 6; max = Math.floor(2.5*slvl - 4.5); }
+      return { min: dmgMultiplier*min, max: dmgMultiplier*max };
     },
-    "Cold Duration": function(slvl) {
-      if (slvl === 0) return 0;
-      return `${(35*slvl + 115) / 25} seconds`;
-    },
+    "Cold Duration": slvl => `${(35*slvl + 115) / 25} seconds`,
     "Mana Cost": () => 3
   },
   dependencies: [

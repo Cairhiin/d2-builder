@@ -32,7 +32,7 @@ const SkillInfo = ({ skill, level, dependency }) => {
       }
     }
   }
-  
+
   return (
     <div>
       { damageJSX.length > 0 && damageJSX }

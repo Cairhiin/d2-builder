@@ -41,13 +41,10 @@ class D2Planner extends Component {
     this.setState(prevState => {
       const skillinfo = getSkillInfo(CLASS_SKILL_DATA[className], id);
       const dependencies = skillinfo[0].dependencies;
-      let multiplier = 1;
       let dep = [];
       for (let i=0; i<dependencies.length; i++) {
-        if (dependencies[i].id in this.state
-          && dependencies[i].description.includes("Damage")) {
+        if (dependencies[i].id in this.state) {
             dep.push(this.state[dependencies[i].id]);
-            multiplier += this.state[dependencies[i].id] * (dependencies[i].value / 100).toFixed(2)
         }
       }
 
@@ -58,7 +55,6 @@ class D2Planner extends Component {
         toolTipStyle,
         toolTipIsActive: true,
         activeTooltipData: skillinfo,
-        activeTooltipMulti: multiplier,
         activeTooltipDepencies: dep,
         activeTooltipId: id,
       };
@@ -171,7 +167,6 @@ class D2Planner extends Component {
           <Tooltip
             skill={this.state.activeTooltipData}
             style={this.state.toolTipStyle}
-            multi={this.state.activeTooltipMulti}
             dependency={this.state.activeTooltipDepencies}
             level={this.state[this.state.activeTooltipId]}
           />

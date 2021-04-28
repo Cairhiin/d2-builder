@@ -7,8 +7,9 @@ import './index.css';
 
 const Tooltip = ({ skill, style, level, dependency }) => {
   const data = skill[0].data;
-  const { name, description, dependencies } = skill[0];
-  const DEPENDENCIES_JSX = [];
+  let { name, description, dependencies } = skill[0];
+  if (typeof dependencies === 'undefined') dependencies = [];
+  let DEPENDENCIES_JSX = [];
 
   for (let d in dependencies) {
     if (dependencies[d].hasOwnProperty("description")) {

@@ -42,9 +42,11 @@ class D2Planner extends Component {
       const skillinfo = getSkillInfo(CLASS_SKILL_DATA[className], id);
       const dependencies = skillinfo[0].dependencies;
       let dep = [];
-      for (let i=0; i<dependencies.length; i++) {
-        if (dependencies[i].id in this.state) {
-            dep.push(this.state[dependencies[i].id]);
+      if (typeof dependencies !== 'undefined') {
+        for (let i=0; i<dependencies.length; i++) {
+          if (dependencies[i].id in this.state) {
+              dep.push(this.state[dependencies[i].id]);
+          }
         }
       }
 

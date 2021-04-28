@@ -1,5 +1,6 @@
 {
   "name": "d2-builder",
+  "type": "module",
   "version": "1.0.0",
   "scripts": {
     "client": "cd client && yarn start",

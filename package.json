@@ -5,7 +5,7 @@
     "client": "cd client && yarn start",
     "server": "cd server && nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "start": "cd client && yarn start"
   },
   "dependencies": {
     "body-parser": "^1.18.3",

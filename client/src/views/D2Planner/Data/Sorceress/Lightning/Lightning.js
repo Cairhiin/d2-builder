@@ -8,13 +8,12 @@ const Lightning = {
         dlvl[1] * Lightning.dependencies[1].value +
         dlvl[2] * Lightning.dependencies[2].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
-      let min = 1;
       let max = 8*slvl + 32
-      if (slvl > 28) { min = 1; max = 36*slvl - 528; }
-      if (slvl > 22) { min = 1; max = 28*slvl - 304; }
-      if (slvl > 16) { min = 1; max = 20*slvl - 128; }
-      if (slvl > 8) { min = 1; max = 12*slvl; }
-      return { min: dmgMultiplier*min, max: dmgMultiplier*max };
+      if (slvl > 28) { max = 36*slvl - 528; }
+      if (slvl > 22) { max = 28*slvl - 304; }
+      if (slvl > 16) { max = 20*slvl - 128; }
+      if (slvl > 8) { max = 12*slvl; }
+      return { min: 1, max: dmgMultiplier*max };
     },
     "Mana Cost": slvl => 7.5 + 0.5*slvl
   },

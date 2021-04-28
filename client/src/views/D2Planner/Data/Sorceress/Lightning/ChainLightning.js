@@ -8,11 +8,10 @@ const ChainLightning = {
         dlvl[1] * ChainLightning.dependencies[1].value +
         dlvl[2] * ChainLightning.dependencies[2].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
-      let min = 1;
       let max = 11*slvl + 29
-      if (slvl > 16) { min = 1; max = 15*slvl - 19; }
-      if (slvl > 8) { min = 1; max = 13*slvl + 13 }
-      return { min: dmgMultiplier*min, max: dmgMultiplier*max };
+      if (slvl > 16) { max = 15*slvl - 19; }
+      if (slvl > 8) { max = 13*slvl + 13 }
+      return { min: 1, max: dmgMultiplier*max };
     },
     "Mana Cost": slvl =>8 + slvl,
     "Hits": slvl => Math.floor((25+slvl) / 5)

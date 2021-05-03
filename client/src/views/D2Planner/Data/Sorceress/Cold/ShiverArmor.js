@@ -9,7 +9,7 @@ const ShiverArmor = {
         + dlvl[0] * ShiverArmor.dependencies[0].value
         + dlvl[2] * ShiverArmor.dependencies[2].value} seconds`;
     },
-    "Damage": function(slvl, dlvl=[0, 0, 0, 0]) {
+    "Cold Damage": function(slvl, dlvl=[0, 0, 0, 0]) {
       let dmgMultiplier = dlvl[1] * ShiverArmor.dependencies[1].value +
         dlvl[3] * ShiverArmor.dependencies[3].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;

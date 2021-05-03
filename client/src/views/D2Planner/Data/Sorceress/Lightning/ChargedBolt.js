@@ -3,7 +3,7 @@ const ChargedBolt = {
   name: "Charged Bolt",
   description: "Fires multiple jumping bolts of electricity that seek their targets",
   data: {
-    "Damage": function(slvl, dlvl = [0]) {
+    "Lightning Damage": function(slvl, dlvl = [0]) {
       let dmgMultiplier = dlvl[0] * ChargedBolt.dependencies[0].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
       let min = Math.floor(0.5*slvl + 1.5);

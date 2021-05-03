@@ -18,7 +18,7 @@ const ImmolationArrow = {
     "Average Fire Damage": function(slvl, dlvl=[0, 0]) {
       let dmgMultiplier = dlvl[0] * ImmolationArrow.dependencies[0].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
-      return { min: dmgMultiplier*(8 + (20*slvl)), max: dmgMultiplier*(16 + (20*slvl)) };
+      return { min: dmgMultiplier*(8 + (20*slvl))*75/256, max: dmgMultiplier*(16 + (20*slvl))*75/256 };
     },
     "Mana Cost": slvl => 5.5 + (0.5*slvl)
   },

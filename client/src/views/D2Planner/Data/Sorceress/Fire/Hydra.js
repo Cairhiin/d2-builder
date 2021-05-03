@@ -3,7 +3,7 @@ const Hydra = {
   name: "Hydra",
   description: "Creates a multi-headed beast that attacks enemies with bolts of fire",
   data: {
-    "Damage": function(slvl, dlvl=[0, 0]) {
+    "Fire Damage": function(slvl, dlvl=[0, 0]) {
       let dmgMultiplier = dlvl[0] * Hydra.dependencies[0].value + dlvl[1] * Hydra.dependencies[1].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
       let min = Math.floor(5.5*slvl + 8.5);

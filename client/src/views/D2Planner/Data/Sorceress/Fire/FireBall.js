@@ -3,7 +3,7 @@ const FireBall = {
   name: "Fire Ball",
   description: "Creates a ball of fire that explodes on impact",
   data: {
-    "Damage": function(slvl, dlvl = [0, 0]) {
+    "Fire Damage": function(slvl, dlvl = [0, 0]) {
       let dmgMultiplier = dlvl[0] * FireBall.dependencies[0].value + dlvl[1] * FireBall.dependencies[1].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
       let min = Math.floor(6.5*slvl - 0.5);

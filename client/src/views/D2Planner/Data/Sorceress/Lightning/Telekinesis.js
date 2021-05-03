@@ -3,7 +3,7 @@ const Telekinesis = {
   name: "Telekinesis",
   description: "Allows you to pick up items, trigger objects, and attack others at a distance",
   data: {
-    "Damage": slvl => ({ min: slvl, max: slvl+1}),
+    "Lightning Damage": slvl => ({ min: slvl, max: slvl+1}),
     "Mana Cost": () => 7
   },
   dependencies: []

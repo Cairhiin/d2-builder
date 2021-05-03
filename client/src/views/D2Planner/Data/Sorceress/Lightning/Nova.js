@@ -3,7 +3,7 @@ const Nova = {
   name: "Nova",
   description: "Creates an expanding ring of electricity",
   data: {
-    "Damage": function(slvl) {
+    "Lightning Damage": function(slvl) {
       let min = 6*slvl - 5;
       let max = 8*slvl + 12
       if (slvl > 28) { min = 10*slvl - 79; max = 12*slvl - 62; }

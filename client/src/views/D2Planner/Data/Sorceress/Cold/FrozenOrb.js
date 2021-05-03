@@ -3,7 +3,7 @@ const FrozenOrb = {
   name: "Frozen Orb",
   description: "A pulsating orb that shreds an area with ice bolts",
   data: {
-    "Damage": function(slvl, dlvl=[0]) {
+    "Cold Damage": function(slvl, dlvl=[0]) {
       let dmgMultiplier = dlvl[0] * FrozenOrb.dependencies[0].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
       let min = 10*slvl + 30;

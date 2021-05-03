@@ -3,7 +3,7 @@ const FrostNova = {
   name: "Frost Nova",
   description: "Creates an expanding ring of ice and frost that damages and slows enemies",
   data: {
-    "Damage": function(slvl, dlvl=[0, 0, 0, 0]) {
+    "Cold Damage": function(slvl, dlvl=[0, 0, 0, 0]) {
       let dmgMultiplier = dlvl[0] * FrostNova.dependencies[0].value +
         dlvl[2] * FrostNova.dependencies[2].value +
         dlvl[3] * FrostNova.dependencies[3].value;

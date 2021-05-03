@@ -3,7 +3,7 @@ const ChainLightning = {
   name: "Chain Lightning",
   description: "Casts a lightning bolt that jumps through multiple targets",
   data: {
-    "Damage": function(slvl, dlvl = [0, 0, 0]) {
+    "Lightning Damage": function(slvl, dlvl = [0, 0, 0]) {
       let dmgMultiplier = dlvl[0] * ChainLightning.dependencies[0].value +
         dlvl[1] * ChainLightning.dependencies[1].value +
         dlvl[2] * ChainLightning.dependencies[2].value;

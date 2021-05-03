@@ -3,7 +3,7 @@ const WakeOfInferno = {
   name: "Wake of Inferno",
   description: "Drops a trap that shoots a large blast of fire",
   data: {
-    "Fire Damage": function(slvl, dlvl=[0, 0, 0, 0]) {
+    "Average Fire Damage": function(slvl, dlvl=[0, 0, 0, 0]) {
       let dmgMultiplier = dlvl[0] * WakeOfInferno.dependencies[0].value +
         dlvl[2] * WakeOfInferno.dependencies[2].value +
         dlvl[3] * WakeOfInferno.dependencies[3].value;

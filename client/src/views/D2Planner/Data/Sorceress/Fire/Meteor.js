@@ -3,7 +3,7 @@ const Meteor = {
   name: "Meteor",
   description: "Summons a meteor from the heavens to smite the enemies",
   data: {
-    "Damage": function(slvl, dlvl=[0, 0, 0]) {
+    "Fire Damage": function(slvl, dlvl=[0, 0, 0]) {
       let dmgMultiplier = dlvl[0] * Meteor.dependencies[0].value + dlvl[1] * Meteor.dependencies[1].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
       let min = 23*slvl + 57;
@@ -14,14 +14,14 @@ const Meteor = {
       if (slvl > 8) { min = 39*slvl - 71; max = 41*slvl - 53; };
       return { min: dmgMultiplier*min, max: dmgMultiplier*max };
     },
-    "Average Damage": function(slvl, dlvl=[0, 0, 0]) {
+    "Average Fire Damage": function(slvl, dlvl=[0, 0, 0]) {
       let dmgMultiplier = dlvl[2] * Meteor.dependencies[2].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
       let min = 32*slvl + 88;
       let max = 32*slvl + 168;
       if (slvl > 16) { min = 48*slvl - 104; max = 48*slvl - 24; }
       if (slvl > 8) { min = 40*slvl + 24; max = 40*slvl + 104; }
-      return { min: dmgMultiplier*min, max: dmgMultiplier*max };
+      return { min: dmgMultiplier*min * 3 * 25/256, max: dmgMultiplier*max * 3 * 25/256 };
     },
     "Mana Cost": () => 2.5,
     "Radius": () => 4,

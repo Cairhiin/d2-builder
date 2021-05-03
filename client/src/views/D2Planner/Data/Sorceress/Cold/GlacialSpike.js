@@ -3,7 +3,7 @@ const GlacialSpike = {
   name: "Glacial Spike",
   description: "A shard of ice that inflicts massive cold damage and explodes to freeze nearby enemies",
   data: {
-    "Damage": function(slvl, dlvl=[0, 0, 0, 0]) {
+    "Cold Damage": function(slvl, dlvl=[0, 0, 0, 0]) {
       let dmgMultiplier = dlvl[0] * GlacialSpike.dependencies[0].value +
         dlvl[1] * GlacialSpike.dependencies[1].value +
         dlvl[3] * GlacialSpike.dependencies[3].value;

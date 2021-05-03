@@ -3,7 +3,7 @@ const Blaze = {
   name: "Blaze",
   description: "Leave a wall of fire in your footsteps",
   data: {
-    "Damage": function(slvl, dlvl=[0, 0]) {
+    "Average Fire Damage": function(slvl, dlvl=[0, 0]) {
       let dmgMultiplier = dlvl[0] * Blaze.dependencies[0].value + dlvl[1] * Blaze.dependencies[1].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
       let min = 32*slvl + 32;
@@ -12,7 +12,7 @@ const Blaze = {
       if (slvl > 22)  { min = 96*slvl - 1056; max = 96*slvl - 992; }
       if (slvl > 16)  { min = 64*slvl - 352; max = 64*slvl - 288; }
       if (slvl > 8) { min = 48*slvl - 96; max = 48*slvl - 32; }
-      return { min: dmgMultiplier*min, max: dmgMultiplier*max };
+      return { min: dmgMultiplier*min * 3 * 25/256, max: dmgMultiplier*max * 3 * 25/256 };
     },
     "Mana Cost": (slvl) => 10 + slvl,
     "Duration": (slvl) => Math.floor((64 + (25*slvl))/25)

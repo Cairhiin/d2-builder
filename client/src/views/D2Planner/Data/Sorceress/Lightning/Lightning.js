@@ -3,7 +3,7 @@ const Lightning = {
   name: "Lightning",
   description: "Casts a bolt of lightning",
   data: {
-    "Damage": function(slvl, dlvl = [0, 0, 0]) {
+    "Lightning Damage": function(slvl, dlvl = [0, 0, 0]) {
       let dmgMultiplier = dlvl[0] *Lightning.dependencies[0].value +
         dlvl[1] * Lightning.dependencies[1].value +
         dlvl[2] * Lightning.dependencies[2].value;

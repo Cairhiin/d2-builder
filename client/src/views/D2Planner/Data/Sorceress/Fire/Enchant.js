@@ -3,7 +3,7 @@ const Enchant = {
   name: "Enchant",
   description: "Temporarily adds Fire damage to a weapon",
   data: {
-    "Damage": (slvl, dlvl=[0]) => {
+    "Fire Damage": (slvl, dlvl=[0]) => {
       let dmgMultiplier = dlvl[0] * Enchant.dependencies[0].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
       let min = Math.floor(1.5*slvl + 6.5);

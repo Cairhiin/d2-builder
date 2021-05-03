@@ -3,7 +3,7 @@ const ThunderStorm = {
   name: "Thunderstorm",
   description: "Summons a thunderstorm that periodically blasts a nearby enemy with a bolt of lightning",
   data: {
-    "Damage": function(slvl) {
+    "Lightning Damage": function(slvl) {
       let min = 10*slvl - 9;
       let max = 10*slvl + 90;
       if (slvl > 16) { min = 11*slvl - 25; max = 11*slvl + 74; }

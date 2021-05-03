@@ -3,7 +3,7 @@ const Blizzard = {
   name: "Blizzard",
   description: "Summons an ice storm to rain cold death onto your enemies",
   data: {
-    "Damage": function(slvl, dlvl=[0, 0, 0]) {
+    "Cold Damage": function(slvl, dlvl=[0, 0, 0]) {
       let dmgMultiplier = dlvl[0] * Blizzard.dependencies[0].value +
         dlvl[1] * Blizzard.dependencies[1].value +
         dlvl[2] * Blizzard.dependencies[2].value;

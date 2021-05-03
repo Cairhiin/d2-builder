@@ -3,7 +3,7 @@ const IceBolt = {
   name: "Ice Bolt",
   description: "Shoots a bolt of ice that damages and slows your victim",
   data: {
-    "Damage": function(slvl, dlvl=[0, 0, 0, 0, 0]) {
+    "Cold Damage": function(slvl, dlvl=[0, 0, 0, 0, 0]) {
       let dmgMultiplier = dlvl[0] * IceBolt.dependencies[0].value +
         dlvl[1] * IceBolt.dependencies[1].value +
         dlvl[2] * IceBolt.dependencies[2].value +

@@ -3,7 +3,7 @@ const FireBolt = {
   name: "Fire Bolt",
   description: "Creates a bolt of fire",
   data: {
-    "Damage": function(slvl, dlvl=[0, 0]) {
+    "Fire Damage": function(slvl, dlvl=[0, 0]) {
       let dmgMultiplier = dlvl[0] * FireBolt.dependencies[0].value + dlvl[1] * FireBolt.dependencies[1].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;
       let min = Math.floor(1.5*slvl + 1.5);

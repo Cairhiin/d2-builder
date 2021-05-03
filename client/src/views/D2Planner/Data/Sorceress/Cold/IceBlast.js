@@ -3,7 +3,7 @@ const IceBlast = {
   name: "Ice Blast",
   description: "Creates a bolt of ice that completely freezes a target",
   data: {
-    "Damage": function(slvl, dlvl=[0, 0]) {
+    "Cold Damage": function(slvl, dlvl=[0, 0]) {
       let dmgMultiplier = dlvl[0] * IceBlast.dependencies[0].value +
         dlvl[1] * IceBlast.dependencies[1].value;
       dmgMultiplier = Math.round((dmgMultiplier / 100 + 1)*100) / 100;

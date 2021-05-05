@@ -12,9 +12,14 @@ const Tooltip = ({ skill, style, level, dependency }) => {
   let DEPENDENCIES_JSX = [];
 
   for (let d in dependencies) {
-    if (dependencies[d].hasOwnProperty("description")) {
+    const hasName = dependencies[d].hasOwnProperty("name");
+    const hasDescription = dependencies[d].hasOwnProperty("description");
+    if (hasDescription && hasName) {
       let text = dependencies[d].description.replace("{V}", dependencies[d].value);
       DEPENDENCIES_JSX.push(<p>{`${dependencies[d].name}: ${text}`}</p>);
+    }
+    if (!hasDescription && hasName) {
+      DEPENDENCIES_JSX.push(<p>{dependencies[d].name}</p>);
     }
   }
 

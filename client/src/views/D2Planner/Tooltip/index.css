@@ -24,3 +24,7 @@
 #tooltip .skill-block {
   margin: 0.5em 0;
 }
+
+#tooltip .skill-block.next-level p {
+  color: #4A5568;
+}

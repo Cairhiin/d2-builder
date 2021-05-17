@@ -1,10 +1,17 @@
 import React from 'react';
 
+const isMinMaxEqual = (min, max) => min === max;
+
 const DamageInfo = ({ label, damage }) => {
+  const min = Math.round(damage["min"]);
+  const max = Math.round(damage["max"]);
   return (
-    <div>
-      { `${label}: ${ Math.round(damage["min"])}-${ Math.round(damage["max"])}`}
-    </div>
+    <p>
+      { label }:
+      { isMinMaxEqual(min, max) ? ` ${min}` :
+        `${min}-${max}`
+      }
+    </p>
   );
 };
 

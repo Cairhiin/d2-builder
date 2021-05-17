@@ -37,7 +37,7 @@ const Tooltip = ({ skill, style, level, dependency }) => {
           />
         </div>
       }
-      <div className="skill-block">
+      <div className="skill-block next-level">
         <p>{`Next Skill level: ${level + 1}`}</p>
         <SkillInfo
           skill={data}

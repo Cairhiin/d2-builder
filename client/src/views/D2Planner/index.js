@@ -52,7 +52,8 @@ class D2Planner extends Component {
 
       let toolTipStyle = Object.assign({}, prevState.toolTipStyle);
       toolTipStyle.left = `${parseInt(coords[2]) + posX - 50}px`;
-      toolTipStyle.top = `${parseInt(coords[3]) + posY + 50}px`;
+      toolTipStyle.top = `${parseInt(coords[3]) + posY + window.scrollY + 50}px`;
+
       return {
         toolTipStyle,
         toolTipIsActive: true,

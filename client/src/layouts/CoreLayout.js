@@ -22,7 +22,7 @@ const PrivateRoute = ({ component: Component, isLoggedIn, ...rest }) => {
 const CoreLayout = () => {
   return (
     <div id="coreLayout">
-      <NavBar />
+      <NavBar id="header" />
       <Box w="100%" textAlign="center" id="main">
         <Switch>
           {
@@ -45,6 +45,9 @@ const CoreLayout = () => {
             )
           }
         </Switch>
+      </Box>
+      <Box w="100%" textAlign="center" id="footer">
+        <img src='/images/Diablo-2-Resurrected-Logo.png' alt="Diablo 2 Resurrected Logo" width="20%" />
       </Box>
     </div>
   );

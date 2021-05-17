@@ -12,7 +12,11 @@
   /* font-family: 'Diablo Heavy'; */
   font-weight: bold;
   color: lime;
-  font-size: 21px;
+  font-size: 20px;
+}
+
+#tooltip h4 {
+  font-size: 18px;
 }
 
 #tooltip p, #tooltip div {

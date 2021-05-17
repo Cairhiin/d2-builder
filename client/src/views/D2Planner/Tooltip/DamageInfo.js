@@ -9,7 +9,7 @@ const DamageInfo = ({ label, damage }) => {
     <p>
       { label }:
       { isMinMaxEqual(min, max) ? ` ${min}` :
-        `${min}-${max}`
+        ` ${min}-${max}`
       }
     </p>
   );

@@ -1,20 +1,19 @@
 import React from 'react';
-import { Box, Flex, Button } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import {
-  Link,
   Route,
   Switch,
   useParams,
   useRouteMatch
 } from "react-router-dom";
-import D2PlannerCharView from './D2Planner/D2PlannerCharView';
-import './D2PlannerView.css';
+import CharView from './D2Planner/D2PlannerCharView';
+import ButtonGroup from './D2PlannerButtonGroup';
 
 const D2PlannerView = () => {
   let { path, url } = useRouteMatch();
   return (
     <div>
-      <Box>
+      <Box className="D2Planner" mt="15em">
         <Flex
           className="button-box"
           align="center"
@@ -22,41 +21,7 @@ const D2PlannerView = () => {
           wrap="wrap"
           w="100%"
         >
-          <Button colorScheme="teal" size="md">
-            <Link to={`${url}/amazon`}>
-              Amazon
-            </Link>
-          </Button>
-          <Button colorScheme="teal" size="md">
-            <Link to={`${url}/assassin`}>
-              Assassin
-            </Link>
-          </Button>
-          <Button colorScheme="teal" size="md">
-            <Link to={`${url}/barbarian`}>
-              Barbarian
-            </Link>
-          </Button>
-          <Button colorScheme="teal" size="md">
-            <Link to={`${url}/druid`}>
-              Druid
-            </Link>
-          </Button>
-          <Button colorScheme="teal" size="md">
-            <Link to={`${url}/necromancer`}>
-              Necromancer
-            </Link>
-          </Button>
-          <Button colorScheme="teal" size="md">
-            <Link to={`${url}/paladin`}>
-              Paladin
-            </Link>
-          </Button>
-          <Button colorScheme="teal" size="md">
-            <Link to={`${url}/sorceress`}>
-              Sorceress
-            </Link>
-          </Button>
+          <ButtonGroup url={url} />
         </Flex>
       </Box>
       <Switch>
@@ -74,7 +39,7 @@ const D2PlannerView = () => {
 function CharClassView() {
   let { charClass } = useParams();
   return (
-    <D2PlannerCharView charClass={charClass}/>
+    <CharView charClass={charClass}/>
   );
 }
 

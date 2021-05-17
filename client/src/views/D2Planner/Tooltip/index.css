@@ -9,21 +9,16 @@
 }
 
 #tooltip h2, #tooltip h4 {
-  font-family: 'Diablo Heavy';
-  font-variant: small-caps;
+  /* font-family: 'Diablo Heavy'; */
   font-weight: bold;
   color: lime;
   font-size: 21px;
 }
 
 #tooltip p, #tooltip div {
-  font-family: 'Diablo Heavy';
+  /* font-family: 'Diablo Heavy'; */
   color: white;
   font-size: 16px;
-}
-
-#tooltip h2::first-letter {
-  font-variant: normal;
 }
 
 #tooltip .skill-block {

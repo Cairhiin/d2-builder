@@ -2,12 +2,32 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { ChakraProvider } from "@chakra-ui/react"
+import { ChakraProvider, extendTheme } from "@chakra-ui/react"
 import reportWebVitals from './reportWebVitals';
+
+const styles = {
+  global: (props) => ({
+    "body": {
+      fontFamily: "body",
+      color: props.colorMode === "dark" ? "gray.800" : "whiteAlpha.900",
+      bg:  props.colorMode === "dark" ? "black" : "black",
+      lineHeight: "base"
+    },
+    "*::placeholder": {
+      color: props.colorMode === "dark" ? "gray.400" : "whiteAlpha.400",
+    },
+    "*, *::before, &::after": {
+      borderColor: props.colorMode === "dark" ? "gray.200" : "whiteAlpha.300",
+      wordWrap: "break-word",
+    }
+  })
+}
+
+const theme = extendTheme({ styles })
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={ theme }>
       <App />
     </ChakraProvider>
   </React.StrictMode>,

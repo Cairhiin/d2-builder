@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import ROUTES from '../routes';
 import NavBar from "./NavBar";
+import './CoreLayout.css';
 
 const PrivateRoute = ({ component: Component, isLoggedIn, ...rest }) => {
   return (
@@ -22,7 +23,7 @@ const CoreLayout = () => {
   return (
     <div id="coreLayout">
       <NavBar />
-      <Box w="100%" textAlign="center">
+      <Box w="100%" textAlign="center" id="main">
         <Switch>
           {
             ROUTES.map((route, index) => (

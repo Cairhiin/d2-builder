@@ -26,7 +26,7 @@ const D2PlannerView = () => {
       </Box>
       <Switch>
         <Route exact path={path}>
-          <h3>Please select a topic.</h3>
+          <CharClassView />
         </Route>
         <Route path={`${path}/:charClass`}>
           <CharClassView />

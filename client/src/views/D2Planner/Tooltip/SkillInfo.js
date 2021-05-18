@@ -14,20 +14,21 @@ const SkillInfo = ({ skill, level, dependency }) => {
         if (typeof damage === 'object' && !_.isEmpty(damage)) {
           infoJSX.push(
              <DamageInfo
-               damage={damage}
-               label={specialName}
+                key={specialName+level}
+                damage={damage}
+                label={specialName}
              />
            );
          }
          // in case the function doesn't return a damage object, fe: Fire Mastery
-         if (typeof damage !== 'object') {
+        if (typeof damage !== 'object') {
            special = skill[inf](level, dependency);
-           infoJSX.push(<p>{`${specialName}: ${special}`}</p>)
+           infoJSX.push(<p key={specialName+level}>{`${specialName}: ${special}`}</p>)
          }
       }
       else if (typeof skill[inf] === "function") {
         special = skill[inf](level, dependency);
-        infoJSX.push(<p>{`${specialName}: ${special}`}</p>)
+        infoJSX.push(<p key={specialName+level}>{`${specialName}: ${special}`}</p>)
       }
     }
   }

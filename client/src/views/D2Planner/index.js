@@ -125,7 +125,7 @@ class D2Planner extends Component {
   }
 
   render() {
-    const CHAR_CLASS = this.props.charClass;
+    let CHAR_CLASS = this.props.charClass;
     const SKILL_TREE_NAMES = this.props.skillTreeNames;
     const SKILL_TREES = this.props.skillTrees;
     return (

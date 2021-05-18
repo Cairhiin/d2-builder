@@ -2,7 +2,7 @@ import React from 'react';
 import { CHAR_DATA } from './Data/';
 import D2Planner from './';
 
-const D2PlannerCharView = ({ charClass }) => {
+const D2PlannerCharView = ({ charClass="amazon" }) => {
   return (
     <div>
       <D2Planner

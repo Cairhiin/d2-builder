@@ -7,10 +7,7 @@ const DamageInfo = ({ label, damage }) => {
   const max = Math.round(damage["max"]);
   return (
     <p>
-      { label }:
-      { isMinMaxEqual(min, max) ? ` ${min}` :
-        ` ${min}-${max}`
-      }
+      { label }: { isMinMaxEqual(min, max) ? ` ${min}` : ` ${min}-${max}` }
     </p>
   );
 };

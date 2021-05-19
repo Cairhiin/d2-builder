@@ -10,16 +10,16 @@ import SwordMastery from './SwordMastery';
 import ThrowMastery from './ThrowMastery';
 
 const Masteries = [
+  SwordMastery,
   AxeMastery,
-  IncreasedSpeed,
-  IronSkin,
   MaceMastery,
-  NaturalResistance,
   PoleMastery,
+  ThrowMastery,
   SpearMastery,
   Stamina,
-  SwordMastery,
-  ThrowMastery
+  IronSkin,
+  IncreasedSpeed,
+  NaturalResistance  
 ];
 
 export default Masteries;

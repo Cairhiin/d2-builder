@@ -3,9 +3,9 @@ import JavelinSkills from './Amazon/Javelin';
 import PassiveSkills from './Amazon/Passive';
 
 const AMAZON_SKILLS = [
-  ...BowSkills,
   ...JavelinSkills,
-  ...PassiveSkills
+  ...PassiveSkills,
+  ...BowSkills
 ];
 
 const AMAZON_SKILL_TREE_NAMES = [

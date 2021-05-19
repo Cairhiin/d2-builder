@@ -3,9 +3,9 @@ import ShapeShifting from './Druid/ShapeShifting';
 import Summoning from './Druid/Summoning';
 
 const DRUID_SKILLS = [
-  ...ElementalSkills,
+  ...Summoning,
   ...ShapeShifting,
-  ...Summoning
+  ...ElementalSkills,
 ];
 
 const DRUID_SKILL_TREE_NAMES = [

@@ -10,16 +10,16 @@ import Twister from './Twister';
 import Volcano from './Volcano';
 
 const ElementalSkills = [
-  ArcticBlast,
-  Armageddon,
-  CycloneArmor ,
   FireStorm,
-  Fissure,
-  Hurricane,
   MoltenBoulder,
-  Tornado,
+  ArcticBlast,
+  Fissure,
+  CycloneArmor,
   Twister,
-  Volcano
+  Volcano,
+  Tornado,
+  Armageddon,
+  Hurricane
 ];
 
 export default ElementalSkills;

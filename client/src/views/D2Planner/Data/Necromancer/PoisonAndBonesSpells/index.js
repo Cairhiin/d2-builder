@@ -10,15 +10,15 @@ import Teeth from './Teeth';
 import BoneSpirit from './BoneSpirit';
 
 const PoisonAndBonesSpells = [
-  BoneArmor,
-  BoneWall,
-  BoneSpear ,
-  BonePrison,
-  CorpseExplosion,
-  PoisonDagger,
-  PoisonExplosion,
-  PoisonNova,
   Teeth,
+  BoneArmor,
+  PoisonDagger,
+  CorpseExplosion,
+  BoneWall,
+  PoisonExplosion,
+  BoneSpear,
+  BonePrison,
+  PoisonNova,
   BoneSpirit
 ];
 

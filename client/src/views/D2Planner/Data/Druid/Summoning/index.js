@@ -10,16 +10,16 @@ import SpiritWolf from './SpiritWolf';
 import Wolverine from './Wolverine';
 
 const Summoning = [
-  CarrionVine,
-  DireWolf,
-  Grizzly,
-  OakSage,
-  PoisonCreeper,
   Raven,
+  PoisonCreeper,
+  OakSage,
+  SpiritWolf,
+  CarrionVine,
+  Wolverine,
+  DireWolf,
   SolarVine,
   SpiritOfBarbs,
-  SpiritWolf,
-  Wolverine
+  Grizzly
 ];
 
 export default Summoning;

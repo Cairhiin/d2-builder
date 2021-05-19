@@ -10,16 +10,16 @@ import Salvation from './Salvation';
 import Vigor from './Vigor';
 
 const Defensive = [
-  Cleansing,
-  ColdResist,
-  Defiance,
-  FireResist,
-  LightningResist,
-  Meditation,
   Prayer,
+  FireResist,
+  Defiance,
+  ColdResist,
+  Cleansing,
+  LightningResist,
+  Vigor,
+  Meditation,
   Redemption,
-  Salvation,
-  Vigor
+  Salvation
 ];
 
 export default Defensive;

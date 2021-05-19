@@ -3,9 +3,9 @@ import Masteries from './Barbarian/Masteries';
 import CombatSkills from './Barbarian/Combat';
 
 const BARBARIAN_SKILLS = [
-  ...Warcries,
+  ...CombatSkills,
   ...Masteries,
-  ...CombatSkills
+  ...Warcries
 ];
 
 const BARBARIAN_SKILL_TREE_NAMES = [

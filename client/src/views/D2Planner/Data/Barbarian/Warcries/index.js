@@ -10,16 +10,16 @@ import Taunt from './Taunt';
 import WarCry from './WarCry';
 
 const Warcries = [
-  BattleCommand,
+  Howl,
+  FindPotion,
+  Taunt,
+  Shout,
+  FindItem,
   BattleCry,
   BattleOrders,
-  FindItem,
-  FindPotion,
   GrimWard,
-  Howl,
-  Shout,
-  Taunt,
-  WarCry
+  WarCry,
+  BattleCommand
 ];
 
 export default Warcries;

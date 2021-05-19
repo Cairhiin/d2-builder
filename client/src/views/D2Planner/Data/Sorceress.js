@@ -3,9 +3,9 @@ import LightningSkills from './Sorceress/Lightning';
 import ColdSkills from './Sorceress/Cold';
 
 const SORCERESS_SKILLS = [
-  ...ColdSkills,
+  ...FireSkills,
   ...LightningSkills,
-  ...FireSkills
+  ...ColdSkills
 ];
 
 const SORCERESS_SKILL_TREE_NAMES = [

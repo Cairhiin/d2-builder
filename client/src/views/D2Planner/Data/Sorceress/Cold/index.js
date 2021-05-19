@@ -12,8 +12,8 @@ import ColdMastery from './ColdMastery';
 const ColdSkills = [
   IceBolt,
   FrozenArmor,
-  IceBlast ,
   FrostNova,
+  IceBlast,
   ShiverArmor,
   GlacialSpike,
   Blizzard,

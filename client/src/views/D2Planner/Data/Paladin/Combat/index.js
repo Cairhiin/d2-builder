@@ -10,16 +10,16 @@ import Vengeance from './Vengeance';
 import Zeal from './Zeal';
 
 const Combat = [
-  BlessedHammer,
-  Charge,
-  Conversion,
-  FistOfTheHeavens,
-  HolyBolt,
-  HolyShield,
   Sacrifice,
   Smite,
+  HolyBolt,
+  Zeal,
+  Charge,
   Vengeance,
-  Zeal
+  BlessedHammer,
+  Conversion,
+  HolyShield,
+  FistOfTheHeavens,
 ];
 
 export default Combat;

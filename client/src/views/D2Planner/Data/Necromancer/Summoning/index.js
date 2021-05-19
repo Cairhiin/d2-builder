@@ -10,16 +10,16 @@ import SkeletonMastery from './SkeletonMastery';
 import SummonResist from './SummonResist';
 
 const Summoning = [
-  BloodGolem,
-  ClayGolem,
-  FireGolem ,
-  GolemMastery,
-  IronGolem,
-  RaiseSkeletalMage,
-  RaiseSkeleton,
-  Revive,
   SkeletonMastery,
-  SummonResist
+  RaiseSkeleton,
+  ClayGolem,
+  GolemMastery,
+  RaiseSkeletalMage,
+  BloodGolem,
+  SummonResist,
+  IronGolem,
+  FireGolem,
+  Revive
 ];
 
 export default Summoning;

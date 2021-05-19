@@ -10,16 +10,16 @@ import Sanctuary from './Sanctuary';
 import Thorns from './Thorns';
 
 const Offensive = [
+  Might,
+  HolyFire,
+  Thorns,
   BlessedAim,
   Concentration,
-  Conviction,
-  Fanaticism,
-  HolyFire,
   HolyFreeze,
   HolyShock,
-  Might,
   Sanctuary,
-  Thorns
+  Fanaticism,
+  Conviction
 ];
 
 export default Offensive;

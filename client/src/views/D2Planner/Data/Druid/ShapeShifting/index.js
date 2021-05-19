@@ -10,16 +10,16 @@ import Werebear from './Werebear';
 import Werewolf from './Werewolf';
 
 const ShapeShifting = [
-  FeralRage,
-  FireClaws,
-  Fury,
-  Hunger,
+  Werewolf,
   Lycanthropy,
+  Werebear,
+  FeralRage,
   Maul,
   Rabies,
+  FireClaws,
+  Hunger,
   Shockwave,
-  Werebear,
-  Werewolf
+  Fury
 ];
 
 export default ShapeShifting;

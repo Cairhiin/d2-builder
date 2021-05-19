@@ -10,16 +10,16 @@ import MultipleShot from './MultipleShot';
 import Strafe from './Strafe';
 
 const BowSkills = [
-  ColdArrow,
-  ExplodingArrow,
-  FireArrow,
-  FreezingArrow,
-  GuidedArrow,
-  IceArrow,
-  ImmolationArrow,
   MagicArrow,
+  FireArrow,
+  ColdArrow,
   MultipleShot,
-  Strafe
+  ExplodingArrow,
+  IceArrow,
+  GuidedArrow,
+  Strafe,
+  ImmolationArrow,
+  FreezingArrow
 ];
 
 export default BowSkills;

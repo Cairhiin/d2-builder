@@ -10,16 +10,16 @@ import SlowMissile from './SlowMissile';
 import Valkyrie from './Valkyrie';
 
 const PassiveSkills = [
-  Avoid,
-  CriticalStrike,
-  Decoy,
-  Dodge,
-  Evade,
   InnerSight,
-  Penetrate,
-  Pierce,
+  CriticalStrike,
+  Dodge,
   SlowMissile,
-  Valkyrie
+  Avoid,
+  Penetrate,
+  Decoy,
+  Evade,
+  Valkyrie,
+  Pierce,
 ];
 
 export default PassiveSkills;

@@ -10,16 +10,16 @@ import PoisonJavelin from './PoisonJavelin';
 import PowerStrike from './PowerStrike';
 
 const JavelinSkills = [
-  ChargedStrike,
-  Fend,
-  Impale,
   Jab,
-  LightningBolt,
-  LightningFury,
-  LightningStrike,
-  PlagueJavelin,
+  PowerStrike,
   PoisonJavelin,
-  PowerStrike
+  Impale,
+  LightningBolt,
+  ChargedStrike,
+  PlagueJavelin,
+  Fend,
+  LightningStrike,
+  LightningFury,
 ];
 
 export default JavelinSkills;

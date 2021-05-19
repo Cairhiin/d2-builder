@@ -11,15 +11,15 @@ import Weaken from './Weaken';
 
 const Curses = [
   AmplifyDamage,
-  Attract,
-  Confuse ,
-  Decrepify,
   DimVision,
+  Weaken,
   IronMaiden,
-  LifeTap,
-  LowerResist,
   Terror,
-  Weaken
+  Confuse,
+  LifeTap,
+  Attract,
+  Decrepify,
+  LowerResist
 ];
 
 export default Curses;

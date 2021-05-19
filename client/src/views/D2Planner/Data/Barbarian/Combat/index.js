@@ -11,15 +11,15 @@ import WhirlWind from './WhirlWind';
 
 const CombatSkills = [
   Bash,
-  Berserk,
-  Concentrate,
-  DoubleSwing,
-  DoubleThrow,
-  Frenzy,
   Leap,
-  LeapAttack,
+  DoubleSwing,
   Stun,
-  WhirlWind
+  DoubleThrow,
+  LeapAttack,
+  Concentrate,
+  Frenzy,
+  WhirlWind,
+  Berserk
 ];
 
 export default CombatSkills;

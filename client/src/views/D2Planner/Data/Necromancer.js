@@ -3,9 +3,9 @@ import PoisonAndBonesSpells from './Necromancer/PoisonAndBonesSpells';
 import Curses from './Necromancer/Curses';
 
 const NECROMANCER_SKILLS = [
-  ...Summoning,
+  ...Curses,
   ...PoisonAndBonesSpells,
-  ...Curses
+  ...Summoning
 ];
 
 const NECROMANCER_SKILL_TREE_NAMES = [

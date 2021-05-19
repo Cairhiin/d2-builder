@@ -3,9 +3,9 @@ import ShadowSkills from './Assassin/Shadow';
 import TrapSkills from './Assassin/Traps';
 
 const ASSASSIN_SKILLS = [
-  ...MartialSkills,
+  ...TrapSkills,
   ...ShadowSkills,
-  ...TrapSkills
+  ...MartialSkills
 ];
 
 const ASSASSIN_SKILL_TREE_NAMES = [
@@ -17,7 +17,7 @@ const ASSASSIN_SKILL_TREE_NAMES = [
 const MARTIAL = [
   [0, 1, 1],
   [1, 0, "t3r1c3"],
-  [0, "t3r1c1", 0],
+  [0, "t3r1c2", 0],
   ["t3r2c1", 0, "t3r2c3"],
   ["t3r4c1", 0, "t3r4c3"],
   [0, "t3r5c1.t3r3c2", 0]
@@ -35,7 +35,7 @@ const SHADOW = [
 const TRAPS = [
   [0, 1, 0],
   ["t1r1c2", 0, 1],
-  ["t1r1c1", "t1r1c2", 0],
+  ["t1r2c1", "t1r1c2", 0],
   [0, 0, "t1r2c3.t1r3c2"],
   ["t1r3c1", "t1r3c2", 0],
   ["t1r5c1", 0, "t1r4c3"]

@@ -4,10 +4,12 @@ import {
   Route,
   Switch,
   useParams,
-  useRouteMatch
+  useRouteMatch,
+  useLocation
 } from "react-router-dom";
 import CharView from './D2Planner/D2PlannerCharView';
 import ButtonGroup from './D2PlannerButtonGroup';
+import { chunkStr } from './D2Planner/Utilities';
 
 const D2PlannerView = () => {
   let { path, url } = useRouteMatch();
@@ -38,8 +40,11 @@ const D2PlannerView = () => {
 
 function CharClassView() {
   let { charClass } = useParams();
+  const query = useLocation().search.substring(1);
+  let skillPoints = "";
+  if (query.split('=')[0] === "skillPoints") skillPoints=query.split('=')[1];
   return (
-    <CharView charClass={charClass}/>
+    <CharView charClass={charClass} skillPoints={chunkStr(skillPoints, 2)} />
   );
 }
 

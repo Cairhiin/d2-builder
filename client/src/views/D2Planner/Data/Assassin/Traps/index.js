@@ -10,16 +10,16 @@ import WakeOfFire from './WakeOfFire';
 import WakeOfInferno from './WakeOfInferno';
 
 const TrapSkills = [
-  BladeFury,
-  BladeSentinel,
-  BladeShield,
-  ChargedBoltSentry,
-  DeathSentry,
   FireBlast,
-  LightningSentry,
   ShockWeb,
+  BladeSentinel,
+  ChargedBoltSentry,
   WakeOfFire,
-  WakeOfInferno
+  BladeFury,
+  LightningSentry,
+  WakeOfInferno,
+  DeathSentry,
+  BladeShield,
 ];
 
 export default TrapSkills;

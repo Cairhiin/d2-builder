@@ -56,3 +56,16 @@ export const getSkillInfo = (charClassData, id) =>  {
   const skillData = charClassData.filter(skill => skill.id === id);
   return typeof skillData !== undefined && skillData.length !== 0 ? skillData : [{name: "Default", id: "t0r0c0"}];
 }
+
+/*
+  Function that accepts a string, a chunk value, and an array,
+  and returns an array of string chunks
+*/
+export const chunkStr = (str, n=1, acc=[]) => {
+    if (str.length === 0) {
+        return acc
+    } else {
+        acc.push(str.substring(0, n));
+        return chunkStr(str.substring(n), n, acc);
+    }
+}

@@ -10,16 +10,16 @@ import PhoenixStrike from './PhoenixStrike';
 import TigerStrike from './TigerStrike';
 
 const MartialSkills = [
-  BladesOfIce,
-  ClawsOfThunder,
-  CobraStrike,
-  DragonClaw,
-  DragonFlight,
-  DragonTail,
+  TigerStrike,
   DragonTalon,
   FistsOfFire,
-  PhoenixStrike,
-  TigerStrike
+  DragonClaw,
+  CobraStrike,
+  ClawsOfThunder,
+  DragonTail,
+  BladesOfIce,
+  DragonFlight,
+  PhoenixStrike
 ];
 
 export default MartialSkills;

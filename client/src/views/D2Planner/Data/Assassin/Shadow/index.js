@@ -10,16 +10,16 @@ import Venom from './Venom';
 import WeaponBlock from './WeaponBlock';
 
 const ShadowSkills = [
-  BurstOfSpeed,
   ClawMastery,
+  PsychicHammer,
+  BurstOfSpeed,
+  WeaponBlock,
   CloakOfShadows,
   Fade,
-  MindBlast,
-  PsychicHammer,
-  ShadowMaster,
   ShadowWarrior,
+  MindBlast,
   Venom,
-  WeaponBlock
+  ShadowMaster
 ];
 
 export default ShadowSkills;

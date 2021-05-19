@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Stack } from "@chakra-ui/react";
+import { Stack, Box } from "@chakra-ui/react";
 import D2PLANNER_LAYOUT from './Data/layout';
 import Tooltip from './Tooltip';
 import SkillList from './SkillList';
@@ -10,6 +10,7 @@ import {
   getSkillInfo
 } from './Utilities';
 import { CLASS_SKILL_DATA } from './Data';
+import CreateLink from './CreateLink';
 import './D2Planner.css';
 
 const TOTAL_SKILLPOINTS = 110;
@@ -28,6 +29,28 @@ class D2Planner extends Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleMouseLeave = this.handleMouseLeave.bind(this);
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
+  }
+  
+  componentDidMount() {
+    /* Getting skill point data from URL */
+    const { skillPoints } = this.props;
+    let availablePoints = 110;
+    if (skillPoints.length > 0) {
+      let i=0;
+      for (let key in D2PLANNER_LAYOUT) {
+        if (typeof skillPoints[i] !== "undefined" ) {
+          let val = parseInt(skillPoints[i]);
+          if (val < 0) val = 0;
+          if (val > 20) val = 20;
+          availablePoints -= val;
+          this.setState({ [key]: val })
+        } else {
+          this.setState({ [key]: 0 })
+        }
+        i++;
+        this.setState({ skillpoints: availablePoints })
+      }
+    }
   }
 
   handleMouseEnter = (e, id, className) => {
@@ -165,16 +188,21 @@ class D2Planner extends Component {
             })
           }
         </Stack>
-        Available Skill points: { this.state.skillpoints }
-        { this.state.toolTipIsActive &&
-          <Tooltip
-            skill={this.state.activeTooltipData}
-            style={this.state.toolTipStyle}
-            dependency={this.state.activeTooltipDepencies}
-            level={this.state[this.state.activeTooltipId]}
-          />
+        <Box mt="1em">
+          Available Skill points: { this.state.skillpoints }
+          { this.state.toolTipIsActive &&
+            <Tooltip
+              skill={this.state.activeTooltipData}
+              style={this.state.toolTipStyle}
+              dependency={this.state.activeTooltipDepencies}
+              level={this.state[this.state.activeTooltipId]}
+            />
 
-        }
+          }
+        </Box>
+        <Box mt="1em">
+            <CreateLink state={this.state} />
+        </Box>
       </div>
     );
   }

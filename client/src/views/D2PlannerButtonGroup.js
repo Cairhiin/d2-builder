@@ -14,12 +14,12 @@ const PlannerLink = ({ url, isActive, onClick }) => {
 }
 
 const D2PlannerButtonGroup = ({ url }) => {
-  const classes = ['amazon', 'assassin', 'barbarian', 'druid', 'necromancer', 'paladin', 'sorceress'];
-  const [active, setActive] = useState(1);
+  const CLASSES = ['amazon', 'assassin', 'barbarian', 'druid', 'necromancer', 'paladin', 'sorceress'];
+  const [active, setActive] = useState(0);
   return (
     <div>
       {
-        classes.map((className, id) =>
+        CLASSES.map((className, id) =>
           <PlannerLink
             key={id}
             url={`${url}/${className}`}

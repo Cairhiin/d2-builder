@@ -1,6 +1,5 @@
 {
   "name": "d2-builder",
-  "type": "module",
   "version": "1.0.0",
   "scripts": {
     "client": "cd client && yarn start",
@@ -10,7 +9,11 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.10",
     "nodemon": "^2.0.7"
   },
   "devDependencies": {

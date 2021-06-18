@@ -1,4 +1,6 @@
 var db = require('./index.js');
+var imports = require('./Build.js');
+var BuildSchema = imports.BuildSchema;
 
 var User = db.model('User',
   {
@@ -19,7 +21,8 @@ var User = db.model('User',
       type: String,
       required: true,
       unique: true
-    }
+    },
+    builds: [BuildSchema]
   }
 );
 

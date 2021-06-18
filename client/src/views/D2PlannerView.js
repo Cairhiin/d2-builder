@@ -15,7 +15,7 @@ const D2PlannerView = () => {
   let { path, url } = useRouteMatch();
   return (
     <div>
-      <Box className="D2Planner" mt="15em">
+      <Box className="D2Planner">
         <Flex
           className="button-box"
           align="center"

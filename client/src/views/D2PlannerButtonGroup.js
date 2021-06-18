@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import { Box } from "@chakra-ui/react";
 import Button from "./D2PlannerNavButton";
 
 const PlannerLink = ({ url, isActive, onClick }) => {
@@ -17,7 +18,7 @@ const D2PlannerButtonGroup = ({ url }) => {
   const CLASSES = ['amazon', 'assassin', 'barbarian', 'druid', 'necromancer', 'paladin', 'sorceress'];
   const [active, setActive] = useState(0);
   return (
-    <div>
+    <Box>
       {
         CLASSES.map((className, id) =>
           <PlannerLink
@@ -27,7 +28,7 @@ const D2PlannerButtonGroup = ({ url }) => {
             isActive={ active === id+1 && true }
           />)
       }
-    </div>
+    </Box>
   );
 };
 

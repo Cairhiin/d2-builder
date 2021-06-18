@@ -4,9 +4,8 @@ import MenuToggle from './MenuToggle';
 import MenuLinks from './MenuLinks';
 import NavBarContainer from './NavBarContainer';
 
-const NavBar = (props) => {
+const NavBar = ({isLoggedIn, ...props}) => {
   const [isOpen, setIsOpen] = React.useState(false)
-
   const toggle = () => setIsOpen(!isOpen)
 
   return (
@@ -16,7 +15,7 @@ const NavBar = (props) => {
         color={["white", "white", "primary.500", "primary.500"]}
       />
       <MenuToggle toggle={toggle} isOpen={isOpen} />
-      <MenuLinks isOpen={isOpen} />
+      <MenuLinks isOpen={isOpen} isLoggedIn={isLoggedIn} />
     </NavBarContainer>
   )
 }

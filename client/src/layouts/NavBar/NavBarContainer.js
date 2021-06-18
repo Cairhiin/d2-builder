@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex } from "@chakra-ui/react";
 
-const NavBarContainer = ({ children, ...props }) => {
+const NavBarContainer = ({ isLoggedIn, handleLogin, children, ...props }) => {
   return (
     <Flex
       as="nav"

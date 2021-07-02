@@ -56,7 +56,6 @@ const CoreLayout = () => {
                         path={route.path}
                         component={route.component}
                         exact={route.exact}
-                        isLoggedIn = {true}
                       />
                   )
                 )
